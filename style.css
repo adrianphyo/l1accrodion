@@ -1,0 +1,63 @@
+body{
+    font-family: sans-serif;
+}
+
+.accordion{
+    width: 100%;
+}
+
+.accordion .acctitle{
+    background-color: #777;
+    color:#fff;
+    font-size: 14px;
+    
+
+    padding:15px;
+    margin: 0;
+
+    cursor: pointer;
+
+    user-select: none;  /* စာတွေကို mouse ကို ဖိပြီး ဆွဲလို့မရအောင်  */ 
+
+    transition: background-color .2s ease-in;
+
+    /* position: relative; */
+}
+
+.accordion .acctitle:hover{
+    background-color: steelblue;
+}
+
+.accordion .acctitle.active{
+    background-color: steelblue;
+}
+
+/* css ကနေ fontawesome ကို သုံးနည်း */
+.accordion .acctitle::after{
+    /* unicode font မှန်းသိအောင် "\" ထည့်ပေးသည် */
+    content:"\f067"; 
+    font-family: "Font Awesome 5 Free";
+
+    /* position:absolute;
+    right:0;
+    top:50%;
+    transform: translateY(-50%); */
+
+    float:right;
+}
+
+.accordion .acctitle.active::after{
+    content:"\f068"; 
+}
+
+.accordion .acccontent{
+    height: 0;
+    background-color: #f4f4f4;
+    text-indent:50px;
+    text-align: justify;
+    font-size: 14px;
+
+    padding:0 20px;
+
+    overflow: hidden;
+}
